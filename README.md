@@ -8,7 +8,8 @@ Modeling languages allow experts to establish a common and shared vocabulary for
 The framework provides a systematic [approach](#Method) for the design and deployment of AR editors, a dedicated metamodel and some support tools. The generated editors are Android mobile apps based on [Unity](https://unity3d.com), the popular game development platform, along with [Vuforia](https://www.vuforia.com/), a widely used AR development kit.
 
 ## ARE4DSL in action (soon)
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/DGiMIKQ32eU/0.jpg)](http://www.youtube.com/watch?v=DGiMIKQ32eU "Video Title")
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/DGiMIKQ32eU/0.jpg)](https://www.youtube.com/watch?v=DMU6TSxY5DE "An entity-relationship model editor based on Augmented Reality
+")
      
 ## Method
 In order to create domain-specific modeling workbenches based on RA, a number of steps must be carried out:
@@ -25,10 +26,10 @@ In order to create domain-specific modeling workbenches based on RA, a number of
 Soon...
 
 ## Downloads
-Two mobile app for Android devices will be shortly available to edit models using augmented reality features. 
+A mobile app for Android devices using augmented reality features will be shortly available to edit models:  
 
-* State Machine model editor (apk file)
-* Entity-Relationship model editor (apk file)
+* State Machine models
+* Entity-Relationship models
 
 
 ## About
@@ -36,10 +37,11 @@ This framework has been developed by the [SPI-FM research group](http://tic195.u
 
 Project leader: [Iván Ruiz](https://github.com/ruizrube)
 
-Developer: [Pablo Mariscal](pablo.mariscalmartinez@alum(DOT)uca(DOT)es) 
-
-Project Testers:
+Project researchers: 
 [José Miguel Mota](https://github.com/josemiguelmota) and [Juan Manuel Dodero](https://github.com/dodero)
+
+Project developer: [Pablo Mariscal](pablo.mariscalmartinez@alum(DOT)uca(DOT)es) 
+
 
 
 ## Software License
