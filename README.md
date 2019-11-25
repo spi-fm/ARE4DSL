@@ -35,7 +35,7 @@ Assuming that it is known as creating an Acceleo-type project with Eclipse and e
 
 2. Modify the available template so that once we execute the project, source code of type C# compatible with Unity3D is generated.
 
-<img src="https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_1.png" width="250">
+<img src="https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_1.png" width="400">
 
 
 3. Copy the file "generate.emtl" from the folder "bin/[project_name]/main" to "src/[project_name]/main". This step is necessary for the executable jar 	file we generate to work.
@@ -55,13 +55,20 @@ Assuming you know how to create a project in Unity3D, the following steps have b
 
 2. Search the top menu of Unity3D and the "Aredsl" option will now appear. Click on the "Generate Folders" option and the necessary folder structure will be created.
 
+<img src="https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_3.png" width="500">
+
 3. Once you are sure that the folders have been created correctly, look for the folder "Assets/Aredsl/Model" and put the file with the concrete syntax.
 
 4. Put the abstract syntax file of aredsl and the chosen domain in the folder "Assets/Aredsl/Meta_models/sources".
 
 5. Put the Acceleo module in "jar" format previously generated inside "Assets/Aredsl/modules", as well as the module "Newtonsoft.Json.dll".
 
+<img src="https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_4.png" width="500">
+
+
 6. Once all the previous steps have been completed, the "Generate Editor" option must be selected in the "Aredsl" menu, creating in the project scene the necessary GameObjects and a backup of these in the "Assets/Aredsl/Prefabs" folder.
+
+<img src="https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_5.png" width="250">
 
 
 ## Downloads
