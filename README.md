@@ -69,6 +69,8 @@ Assuming you know how to create a project in Unity3D, the following steps have b
 6. Once all the previous steps have been completed, the "Generate Editor" option must be selected in the "Aredsl" menu, creating in the project scene the necessary GameObjects and a backup of these in the "Assets/Aredsl/Prefabs" folder.
 
 <img src="https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_5.png" width="250">
+<img src="https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_6.png" width="250">
+
 
 
 ## Downloads
