@@ -10,6 +10,7 @@ The framework provides a systematic [approach](#Method) for the design and deplo
 ## ARE4DSL in action (soon)
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/DGiMIKQ32eU/0.jpg)](https://www.youtube.com/watch?v=DMU6TSxY5DE "An entity-relationship model editor based on Augmented Reality
 ")
+
      
 ## Method
 In order to create domain-specific modeling workbenches based on RA, a number of steps must be carried out:
@@ -32,6 +33,7 @@ Assuming that it is known as creating an Acceleo-type project with Eclipse and e
 
 1. Create an Acceleo-type Eclipse project and use as DSL the one provided by AREDSL (aredsl.ecore).
 2. Modify the available template so that once we execute the project, source code of type C# compatible with Unity3D is generated.
+[![IMAGE ALT TEXT](https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_1.png)](https://github.com/spi-fm/ARE4DSL/blob/master/img/tools_1.png "capture tools 1")
 3. Copy the file "generate.emtl" from the folder "bin/[project_name]/main" to "src/[project_name]/main". This step is necessary for the executable jar 	file we generate to work.
 4. Finally, we export the project as an executable jar file, obtaining the first of the necessary modules.
 
