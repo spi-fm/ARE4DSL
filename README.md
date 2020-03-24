@@ -86,9 +86,9 @@ This framework has been developed by the [SPI-FM research group](http://tic195.u
 Project leader: [Iván Ruiz](https://github.com/ruizrube)
 
 Project researchers: 
-[José Miguel Mota](https://github.com/josemiguelmota) and [Juan Manuel Dodero](https://github.com/dodero)
+[Rubén Baena Pérez](https://github.com/lordrubenbp) and [José Miguel Mota](https://github.com/josemiguelmota) 
 
-Project developer: [Pablo Mariscal](pablo.mariscalmartinez@alum(DOT)uca(DOT)es) and [Rubén Baena Pérez](https://github.com/lordrubenbp)
+Project developer: [Pablo Mariscal](pablo.mariscalmartinez@alum(DOT)uca(DOT)es) 
 
 
 ## Software License
