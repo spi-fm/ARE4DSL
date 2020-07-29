@@ -79,6 +79,9 @@ A mobile app for Android devices using augmented reality features will be shortl
 * State Machine models
 * Entity-Relationship models
 
+## Case Study
+The experience was conducted in the context of the 20th International Symposium on Computers in Education (SIIE). Results are available in the file: sus.xlsx 
+
 
 ## About
 This framework has been developed by the [SPI-FM research group](http://tic195.uca.es/) at [University of Cádiz](http://www.uca.es)
