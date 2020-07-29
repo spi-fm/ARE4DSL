@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aredsl:Editor
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aredsl="http://aredsl.uca.es/aredsl"
+    description="Entity Relationship Diagram"
+    fileExtension="erm"
+    name="ERDiagram">
+  <layer semanticExpression="ERModel"
+      description="Entity/Relationship Layer">
+    <nodes id="EntityNode"
+        semanticExpression="FROM ent IN parent.entities SELECT ent"
+        description="Visual representation of a entity (weak or strong)">
+      <nodestyles
+          xsi:type="aredsl:GeometricShapeNodeStyle"
+          width="100"
+          height="100"
+          semanticCondition="ent.isWeak==false"
+          color=""
+          kind="RECTANGLE"/>
+      <nodestyles
+          xsi:type="aredsl:GeometricShapeNodeStyle"
+          width="100"
+          height="100"
+          semanticCondition="ent.isWeak==true"
+          outline="DOUBLE"/>
+      <label
+          semanticExpression="name"
+          id="NodeNameLabel"/>
+      <contentNodes
+          id="EntityAttributeNode"
+          semanticExpression="FROM att IN parent.attributes SELECT att"
+          contaimentKind="EXTERNAL_LINK"
+          description="Visual representation of an entity's attribute">
+        <nodestyles
+            xsi:type="aredsl:GeometricShapeNodeStyle"
+            width="20"
+            height="20"
+            description="Styles for the 'attribute' nodes: blue circles"
+            color="#3F6BE4"/>
+        <label
+            semanticExpression="name"
+            description="The 'name' metaattribute will be used for printing labels"/>
+      </contentNodes>
+    </nodes>
+    <nodes id="RelationshipNode"
+        semanticExpression="FROM rel IN parent.relationships SELECT rel"
+        description="Visual representation of a relationship">
+      <nodestyles
+          xsi:type="aredsl:GeometricShapeNodeStyle"
+          kind="DIAMOND"/>
+      <label
+          semanticExpression="name"
+          id="RelationshipNameLabel"/>
+      <contentNodes
+          id="RelationshipAttributeNode"
+          semanticExpression="FROM att IN parent.attributes SELECT att"
+          contaimentKind="EXTERNAL_LINK"
+          description="Visual representation of an entity's attribute">
+        <nodestyles
+            xsi:type="aredsl:GeometricShapeNodeStyle"
+            kind="ELLIPSE"/>
+        <label
+            semanticExpression="name"
+            id="AttributeNameLabel"/>
+      </contentNodes>
+    </nodes>
+    <edges id="Entity2RelationshipEdge"
+        originSemanticExpression="FROM rel IN parent.relationships SELECT rel.source"
+        destinationSemanticExpression="FROM rel IN parent.relationships SELECT rel"
+        originNode="EntityNode"
+        destinationNode="RelationshipNode"
+        description="Representation of an edge from an entity to the relationship node">
+      <edgestyles/>
+      <originLabel
+          semanticExpression="FROM rel IN parent.relationships SELECT rel.sourceCardinality"
+          id="OriginLabel"/>
+    </edges>
+    <edges id="Relationship2EntityEdge"
+        originSemanticExpression="FROM rel IN parent.relationships SELECT rel"
+        destinationSemanticExpression="FROM rel IN parent.relationships SELECT rel.target"
+        originNode="RelationshipNode"
+        destinationNode="EntityNode"
+        description="Representation of an edge from a relationship node to a given entity ">
+      <edgestyles/>
+      <destinationLabel
+          semanticExpression="FROM rel IN parent.relationships SELECT rel.targetCardinality"
+          id="DestinationLabel"/>
+    </edges>
+    <referenceAction
+        xsi:type="aredsl:MarkerBasedTrackerAction"
+        markerId="99"/>
+  </layer>
+  <toolsets
+      id="TangibleToolSet"
+      description="Tangible ToolSet of a Entity/Relationship Editor">
+    <tools id="CreateEntityTool"
+        description="Tool for creating entities">
+      <behaviours
+          xsi:type="aredsl:CreateInstanceOperation"
+          feature="entities"
+          type="Entity"
+          name="newEntity"/>
+      <behaviours
+          xsi:type="aredsl:ChangeContextOperation"
+          semanticExpression="newEntity"/>
+      <behaviours
+          xsi:type="aredsl:SetOperation"
+          feature="name"
+          value="entity1"/>
+      <actions
+          xsi:type="aredsl:MarkerBasedTrackerAction"
+          markerId="1"/>
+    </tools>
+    <tools id="CreateAttributeTool"
+        description="Tool for creating attributes"
+        precondition="context isTypeOf Entity OR context isTypeOf Relationship">
+      <behaviours
+          xsi:type="aredsl:CreateInstanceOperation"
+          description="Step 1: create instance of the Attribute metaclass"
+          type="Attribute"
+          name="newAttribute"/>
+      <behaviours
+          xsi:type="aredsl:ChangeContextOperation"
+          description="Step 2: place context on the new instance created"
+          semanticExpression="newAttribute"/>
+      <behaviours
+          xsi:type="aredsl:SetOperation"
+          description="Step 3: set a default value for the 'name' metaattribute"
+          feature="name"
+          value="attribute1"/>
+      <actions
+          xsi:type="aredsl:MarkerBasedTrackerAction"
+          description="ID of the AR marker to be recognized to create a new attribute"
+          markerId="2"/>
+    </tools>
+    <tools id="CreateRelationshipTool"
+        description="Tool for creating relationships"
+        precondition="context isTypeOf Entity"
+        targetPrecondition="context isTypeOf Entity">
+      <behaviours
+          xsi:type="aredsl:CreateInstanceOperation"
+          feature="relationships"
+          type="Relationship"
+          name="newRelationship"/>
+      <behaviours
+          xsi:type="aredsl:ChangeContextOperation"
+          semanticExpression="newRelationship"/>
+      <behaviours
+          xsi:type="aredsl:SetOperation"
+          feature="name"
+          value="relationship1"/>
+      <behaviours
+          xsi:type="aredsl:SetOperation"
+          feature="source"
+          value="sourceReference"/>
+      <behaviours
+          xsi:type="aredsl:SetOperation"
+          feature="target"
+          value="targetReference"/>
+      <actions
+          xsi:type="aredsl:MarkerBasedTrackerAction"
+          markerId="3"/>
+    </tools>
+    <tools id="EraserTool"
+        description="Tool for removing elements"
+        precondition="Any"
+        targetPrecondition="Any">
+      <behaviours
+          xsi:type="aredsl:RemoveOperation"/>
+      <actions
+          xsi:type="aredsl:MarkerBasedTrackerAction"
+          markerId="4"/>
+    </tools>
+    <tools id="MoveTool"
+        description="Tool for setting the spatial base position of the model">
+      <behaviours
+          xsi:type="aredsl:MoveElement"/>
+      <actions
+          xsi:type="aredsl:MarkerBasedTrackerAction"
+          markerId="5"/>
+    </tools>
+  </toolsets>
+  <toolsets
+      id="TactileToolSet"
+      description="Tactile (screen) toolset of a Entity/Relationship Editor">
+    <tools id="BackTool"
+        description="Tool for backing to the main screen">
+      <behaviours
+          xsi:type="aredsl:Exit"/>
+      <actions
+          xsi:type="aredsl:TactileAction"/>
+    </tools>
+  </toolsets>
+</aredsl:Editor>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="aredsl" nsURI="http://aredsl.uca.es/aredsl" nsPrefix="aredsl">
+  <eClassifiers xsi:type="ecore:EClass" name="Editor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layer" lowerBound="1" upperBound="-1"
+        eType="#//Layer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fileExtension" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toolsets" lowerBound="1"
+        upperBound="-1" eType="#//ToolSet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="queryLanguageKind" eType="#//QueryLanguageKind"
+        defaultValueLiteral="LINQ"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Layer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="DefaultLayer" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semanticExpression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//Node" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="edges" upperBound="-1"
+        eType="#//Edge" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceAction" eType="#//TrackerAction"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semanticExpression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodestyles" upperBound="-1"
+        eType="#//NodeStyle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Label"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contaimentKind" eType="#//ContainmentKind"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contentNodes" upperBound="-1"
+        eType="#//Node" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LabelStyle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semanticCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LineKind">
+    <eLiterals name="SOLID" literal="SOLID"/>
+    <eLiterals name="DASHED" value="1" literal="DASHED"/>
+    <eLiterals name="DOTTED" value="2" literal="DOTTED"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeStyle" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semanticCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Model3DNodeStyle" eSuperTypes="#//NodeStyle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Image2DNodeStyle" eSuperTypes="#//NodeStyle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeometricShapeNodeStyle" eSuperTypes="#//NodeStyle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//ShapeKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outline" eType="#//OutlineKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="labelstyles" upperBound="-1"
+        eType="#//LabelStyle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semanticExpression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ShapeKind">
+    <eLiterals name="CIRCLE" literal="CIRCLE"/>
+    <eLiterals name="SQUARE" value="1" literal="SQUARE"/>
+    <eLiterals name="RECTANGLE" value="2" literal="RECTANGLE"/>
+    <eLiterals name="ELLIPSE" value="3" literal="ELLIPSE"/>
+    <eLiterals name="DIAMOND" value="4"/>
+    <eLiterals name="TRIANGLE" value="5" literal="TRIANGLE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Edge">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originSemanticExpression"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="destinationSemanticExpression"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="edgestyles" upperBound="-1"
+        eType="#//EdgeStyle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="middleLabel" eType="#//Label"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originNode" lowerBound="1"
+        eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destinationNode" lowerBound="1"
+        eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originLabel" eType="#//Label"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destinationLabel" eType="#//Label"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EdgeStyle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//LineKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semanticCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ContainmentKind">
+    <eLiterals name="FREE"/>
+    <eLiterals name="HORIZONTAL_ARRANGEMENT" value="1"/>
+    <eLiterals name="VERTICAL_ARRANGEMENT" value="2"/>
+    <eLiterals name="EXTERNAL_LINK" value="3" literal="EXTERNAL_LINK"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tool">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviours" lowerBound="1"
+        upperBound="-1" eType="#//Behaviour" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="precondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="None"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetPrecondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="None"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" lowerBound="1"
+        upperBound="-1" eType="#//Action" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CreateInstanceOperation" eSuperTypes="#//DomainOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="newInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainOperation" abstract="true" eSuperTypes="#//Behaviour"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RemoveOperation" eSuperTypes="#//DomainOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraint" eType="#//IntegrityRestrictionKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetOperation" eSuperTypes="#//DomainOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraint" eType="#//IntegrityRestrictionKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnsetOperation" eSuperTypes="#//DomainOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraint" eType="#//IntegrityRestrictionKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToolSet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="DefaultToolSet" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tools" upperBound="-1"
+        eType="#//Tool" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangeContextOperation" eSuperTypes="#//DomainOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semanticExpression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkerBasedTrackerAction" eSuperTypes="#//TrackerAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="markerId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkerLessTrackerAction" eSuperTypes="#//TrackerAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SensorBasedAction" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="IntegrityRestrictionKind">
+    <eLiterals name="CASCADE"/>
+    <eLiterals name="SET_NULL" value="1"/>
+    <eLiterals name="NO_ACTION" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="QueryLanguageKind">
+    <eLiterals name="LINQ"/>
+    <eLiterals name="JPQL" value="1"/>
+    <eLiterals name="SQL" value="2"/>
+    <eLiterals name="AQL" value="3"/>
+    <eLiterals name="OCL" value="4"/>
+    <eLiterals name="XPATH_XQUERY" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GestureAction" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VoiceAction" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TrackerAction" abstract="true" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MentalAction" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TactileAction" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="OutlineKind">
+    <eLiterals name="SIMPLE"/>
+    <eLiterals name="DOUBLE" value="1"/>
+    <eLiterals name="NONE" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Behaviour" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SupportOperation" abstract="true" eSuperTypes="#//Behaviour"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MoveElement" eSuperTypes="#//SupportOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ShowSystemMenu" eSuperTypes="#//SupportOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrangeElements" eSuperTypes="#//SupportOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exit" eSuperTypes="#//SupportOperation"/>
+</ecore:EPackage>
