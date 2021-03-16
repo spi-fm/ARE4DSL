@@ -1,0 +1,40 @@
+@xcore.lang.Ecore(nsURI="http://aredsl.uca.es/entityrelationship")
+@xcore.lang.GenModel(creationIcons="false", editDirectory="/entityrelationship.edit/src-gen",
+	editorDirectory="/entityrelationship.editor/src-gen", codeFormatting="true",
+	importerID="org.eclipse.emf.importer.ecore")
+package entityrelationship
+
+class ERModel {
+	contains Entity[] entities
+	contains Relantionship[] relantionships
+	id String name
+}
+
+class Entity {
+	id String name
+	contains Attribute[] attributes
+	boolean isWeak
+}
+
+class Relantionship {
+	String name
+	String sourceCardinality = "0:1"
+	String targetCardinality = "0:1"
+	refers Entity[1] source
+	refers Entity[1] target
+	contains Attribute[] attributes
+}
+
+class Attribute {
+	String name
+	DATATYPE dataType
+	boolean foreignKey
+	boolean isPrimaryKey
+}
+
+enum DATATYPE {
+	INTEGER
+	DATE = 1
+	FLOAT = 2
+	STRING = 3
+}

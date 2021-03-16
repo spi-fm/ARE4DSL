@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/aredsl/src-gen" creationIcons="false" editDirectory="/aredsl.edit/src-gen"
+    editorDirectory="/aredsl.editor/src-gen" modelPluginID="aredsl" modelName="Aredsl"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" runtimePlatform="RCP" importOrganizing="true">
+  <foreignModel>aredsl.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Aredsl" disposableProviderFactory="true" ecorePackage="aredsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="aredsl.ecore#//LineKind">
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//LineKind/SOLID"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//LineKind/DASHED"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//LineKind/DOTTED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="aredsl.ecore#//ShapeKind">
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ShapeKind/CIRCLE"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ShapeKind/SQUARE"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ShapeKind/RECTANGLE"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ShapeKind/ELLIPSE"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ShapeKind/DIAMOND"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ShapeKind/TRIANGLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="aredsl.ecore#//ContainmentKind">
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ContainmentKind/FREE"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ContainmentKind/HORIZONTAL_ARRANGEMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ContainmentKind/VERTICAL_ARRANGEMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//ContainmentKind/EXTERNAL_LINK"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="aredsl.ecore#//IntegrityRestrictionKind">
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//IntegrityRestrictionKind/CASCADE"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//IntegrityRestrictionKind/SET_NULL"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//IntegrityRestrictionKind/NO_ACTION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="aredsl.ecore#//QueryLanguageKind">
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//QueryLanguageKind/LINQ"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//QueryLanguageKind/JPQL"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//QueryLanguageKind/SQL"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//QueryLanguageKind/AQL"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//QueryLanguageKind/OCL"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//QueryLanguageKind/XPATH_XQUERY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="aredsl.ecore#//OutlineKind">
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//OutlineKind/SIMPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//OutlineKind/DOUBLE"/>
+      <genEnumLiterals ecoreEnumLiteral="aredsl.ecore#//OutlineKind/NONE"/>
+    </genEnums>
+    <genClasses ecoreClass="aredsl.ecore#//Editor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Editor/layer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Editor/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Editor/fileExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Editor/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Editor/toolsets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Editor/queryLanguageKind"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//Layer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Layer/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Layer/semanticExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Layer/nodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Layer/edges"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Layer/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aredsl.ecore#//Layer/referenceAction"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Node/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Node/semanticExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Node/nodestyles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference aredsl.ecore#//Node/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Node/contaimentKind"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Node/contentNodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Node/description"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//LabelStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//LabelStyle/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//LabelStyle/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//LabelStyle/semanticCondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//LabelStyle/description"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//NodeStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//NodeStyle/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//NodeStyle/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//NodeStyle/semanticCondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//NodeStyle/description"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//Model3DNodeStyle" labelFeature="#//aredsl/Model3DNodeStyle/file">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Model3DNodeStyle/file"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//Image2DNodeStyle" labelFeature="#//aredsl/Image2DNodeStyle/file">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Image2DNodeStyle/file"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//GeometricShapeNodeStyle" labelFeature="#//aredsl/GeometricShapeNodeStyle/kind">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//GeometricShapeNodeStyle/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//GeometricShapeNodeStyle/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//GeometricShapeNodeStyle/outline"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//Label">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Label/labelstyles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Label/semanticExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Label/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Label/description"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//Edge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Edge/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Edge/originSemanticExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Edge/destinationSemanticExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Edge/edgestyles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Edge/middleLabel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aredsl.ecore#//Edge/originNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aredsl.ecore#//Edge/destinationNode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Edge/originLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Edge/destinationLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Edge/description"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//EdgeStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//EdgeStyle/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//EdgeStyle/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//EdgeStyle/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//EdgeStyle/semanticCondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//EdgeStyle/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aredsl.ecore#//Tool">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Tool/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Tool/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Tool/behaviours"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Tool/precondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Tool/targetPrecondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//Tool/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//CreateInstanceOperation" labelFeature="#//aredsl/CreateInstanceOperation/type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//CreateInstanceOperation/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//CreateInstanceOperation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//CreateInstanceOperation/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aredsl.ecore#//DomainOperation"/>
+    <genClasses ecoreClass="aredsl.ecore#//RemoveOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//RemoveOperation/constraint"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//SetOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//SetOperation/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//SetOperation/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//SetOperation/constraint"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//UnsetOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//UnsetOperation/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//UnsetOperation/constraint"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//ToolSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//ToolSet/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//ToolSet/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aredsl.ecore#//ToolSet/tools"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//ChangeContextOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//ChangeContextOperation/semanticExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//MarkerBasedTrackerAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//MarkerBasedTrackerAction/markerId"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//MarkerLessTrackerAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//MarkerLessTrackerAction/file"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//SensorBasedAction"/>
+    <genClasses ecoreClass="aredsl.ecore#//GestureAction"/>
+    <genClasses ecoreClass="aredsl.ecore#//VoiceAction"/>
+    <genClasses image="false" ecoreClass="aredsl.ecore#//TrackerAction"/>
+    <genClasses image="false" ecoreClass="aredsl.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Action/description"/>
+    </genClasses>
+    <genClasses ecoreClass="aredsl.ecore#//MentalAction"/>
+    <genClasses ecoreClass="aredsl.ecore#//TactileAction"/>
+    <genClasses image="false" ecoreClass="aredsl.ecore#//Behaviour">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aredsl.ecore#//Behaviour/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aredsl.ecore#//SupportOperation"/>
+    <genClasses ecoreClass="aredsl.ecore#//MoveElement"/>
+    <genClasses ecoreClass="aredsl.ecore#//ShowSystemMenu"/>
+    <genClasses ecoreClass="aredsl.ecore#//ArrangeElements"/>
+    <genClasses ecoreClass="aredsl.ecore#//Exit"/>
+  </genPackages>
+</genmodel:GenModel>

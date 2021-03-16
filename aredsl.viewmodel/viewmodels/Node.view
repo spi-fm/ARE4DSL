@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmlns:org.eclipse.emf.ecp.view.table.model="http://org/eclipse/emf/ecp/view/table/model/150" xmi:id="_qkVYwCYKEeiyMYI4Xrvucw" name="Node">
+  <rootEClass href="http://aredsl.uca.es/aredsl#//Node"/>
+  <ecorePaths>/aredsl/model/aredsl.ecore</ecorePaths>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qkXN8CYKEeiyMYI4Xrvucw" name="Control id">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qkXN8SYKEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Node/id"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qkXN_CYKEeiyMYI4Xrvucw" name="Control description">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qkXN_SYKEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Node/description"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qkXN8iYKEeiyMYI4Xrvucw" name="Control semantics">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qkXN8yYKEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Node/semantics"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_-WegACYqEeiyMYI4Xrvucw" name="Control styles">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_PwF3MCYrEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Node/nodestyles"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qkXN9iYKEeiyMYI4Xrvucw" name="Control label">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qkXN9yYKEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Node/label"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_qkXN-CYKEeiyMYI4Xrvucw" name="Control contaimentKind">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_qkXN-SYKEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Node/contaimentKind"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" xmi:id="_2oOBYCYKEeiyMYI4Xrvucw" name="Control content nodes" detailEditing="WithDialog">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference" xmi:id="_6ZyOgCYKEeiyMYI4Xrvucw">
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_ACuM8CYLEeiyMYI4Xrvucw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Node/id"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_ACuM8yYLEeiyMYI4Xrvucw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Node/description"/>
+      </columnDomainModelReferences>
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_6ZyOgSYKEeiyMYI4Xrvucw">
+        <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Node/contentNodes"/>
+      </domainModelReference>
+    </domainModelReference>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

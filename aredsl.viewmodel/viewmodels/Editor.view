@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_fDKr4FziEei4CpCpXFwntA" name="Editor">
+  <rootEClass href="http://aredsl.uca.es/aredsl#//Editor"/>
+  <ecorePaths>/aredsl/model/aredsl.ecore</ecorePaths>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_fJvN9FziEei4CpCpXFwntA" name="Control name">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_fJvN9VziEei4CpCpXFwntA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Editor/name"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_fJvN8FziEei4CpCpXFwntA" name="Control description">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_fJvN8VziEei4CpCpXFwntA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Editor/description"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_fJvN8lziEei4CpCpXFwntA" name="Control fileExtension">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_fJvN81ziEei4CpCpXFwntA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Editor/fileExtension"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_fJvN-FziEei4CpCpXFwntA" name="Control queryLanguageKind">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_fJvN-VziEei4CpCpXFwntA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Editor/queryLanguageKind"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_fJvN9lziEei4CpCpXFwntA" name="Control toolsets">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_fJvN91ziEei4CpCpXFwntA">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Editor/toolsets"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_fJum4FziEei4CpCpXFwntA" name="Control layer">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_fJum4VziEei4CpCpXFwntA">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Editor/layer"/>
+    </domainModelReference>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

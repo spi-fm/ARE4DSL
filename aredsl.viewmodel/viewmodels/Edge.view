@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_hV_uACYXEeiyMYI4Xrvucw" name="Edge">
+  <rootEClass href="http://aredsl.uca.es/aredsl#//Edge"/>
+  <ecorePaths>/aredsl/model/aredsl.ecore</ecorePaths>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjMCYXEeiyMYI4Xrvucw" name="Control id">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hWBjMSYXEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Edge/id"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjQiYXEeiyMYI4Xrvucw" name="Control description">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hWBjQyYXEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Edge/description"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjOiYXEeiyMYI4Xrvucw" name="Control originNode">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hWBjOyYXEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Edge/originNode"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjMiYXEeiyMYI4Xrvucw" name="Control originSemantics">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_1_JWwCYsEeivd6paDq0vYA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Edge/originSemantics"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjPCYXEeiyMYI4Xrvucw" name="Control destinationNode">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hWBjPSYXEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Edge/destinationNode"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjNCYXEeiyMYI4Xrvucw" name="Control targetSemantics">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_4ImWkCYsEeivd6paDq0vYA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Edge/destinationSemantics"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjNiYXEeiyMYI4Xrvucw" name="Control edgestyles">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hWBjNyYXEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Edge/edgestyles"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjPiYXEeiyMYI4Xrvucw" name="Control originLabel">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hWBjPyYXEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Edge/originLabel"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjOCYXEeiyMYI4Xrvucw" name="Control middleLabel">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hWBjOSYXEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Edge/middleLabel"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hWBjQCYXEeiyMYI4Xrvucw" name="Control destinationLabel">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hWBjQSYXEeiyMYI4Xrvucw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//Edge/destinationLabel"/>
+    </domainModelReference>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

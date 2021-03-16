@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmlns:org.eclipse.emf.ecp.view.table.model="http://org/eclipse/emf/ecp/view/table/model/150" xmi:id="_J3phICX_EeiN7sb478m5xw" name="ToolSet">
+  <rootEClass href="http://aredsl.uca.es/aredsl#//ToolSet"/>
+  <ecorePaths>/aredsl/model/aredsl.ecore</ecorePaths>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_J3vAsCX_EeiN7sb478m5xw" name="Control id">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_J3vAsSX_EeiN7sb478m5xw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//ToolSet/id"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_J3vAsiX_EeiN7sb478m5xw" name="Control description">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_J3vAsyX_EeiN7sb478m5xw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//ToolSet/description"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" xmi:id="_humAwCYCEeiyMYI4Xrvucw" name="Control tools" detailEditing="WithDialog">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference" xmi:id="_lQjEkCYCEeiyMYI4Xrvucw">
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_m3GLoCYCEeiyMYI4Xrvucw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Tool/id"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_m3GLoSYCEeiyMYI4Xrvucw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://aredsl.uca.es/aredsl#//Tool/description"/>
+      </columnDomainModelReferences>
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_lQjEkSYCEeiyMYI4Xrvucw">
+        <domainModelEFeature xsi:type="ecore:EReference" href="http://aredsl.uca.es/aredsl#//ToolSet/tools"/>
+      </domainModelReference>
+    </domainModelReference>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
+<file filePath="viewmodels/Edge.view"/>
+
+<file filePath="viewmodels/Node.view"/>
+
+<file filePath="viewmodels/Layer.view"/>
+
+<file filePath="viewmodels/Tool.view"/>
+
+<file filePath="viewmodels/ToolSet.view"/>
+
+<file filePath="viewmodels/Editor.view"/>
+
+   </extension>
+
+</plugin>

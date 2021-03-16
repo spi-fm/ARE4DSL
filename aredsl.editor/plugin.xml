@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="AredslEditorAdvisorApplication">
+      <!-- @generated aredsl -->
+      <application>
+         <run class="aredsl.presentation.AredslEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated aredsl -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="aredsl.presentation.AredslEditorAdvisor$Perspective"
+            id="aredsl.presentation.AredslEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated aredsl -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="aredsl.presentation.AredslEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="aredsl.presentation.AredslEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated aredsl -->
+      <key
+            commandId="aredsl.presentation.AredslEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="aredsl.presentation.AredslEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated aredsl -->
+      <actionSet
+            label="%_UI_AredslEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="AredslEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="aredsl.presentation.AredslEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="aredsl.presentation.AredslEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="aredsl.presentation.AredslEditorAdvisorOpenURICommand"
+               class="aredsl.presentation.AredslEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="aredsl.presentation.AredslEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="aredsl.presentation.AredslEditorAdvisorOpenCommand"
+               class="aredsl.presentation.AredslEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="aredsl.presentation.AredslEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated aredsl -->
+      <actionSet
+            label="%_UI_AredslModelWizard_ActionSet_label"
+            visible="true"
+            id="aredsl.presentation.AredslActionBarContributorActionSet">
+         <action
+               label="%_UI_AredslModelWizard_label"
+               class="aredsl.presentation.AredslActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="aredsl.presentation.AredslActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated aredsl -->
+      <editor
+            id="aredsl.presentation.AredslEditorID"
+            name="%_UI_AredslEditor_label"
+            icon="icons/full/obj16/AredslModelFile.gif"
+            extensions="aredsl"
+            class="aredsl.presentation.AredslEditor"
+            contributorClass="aredsl.presentation.AredslActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

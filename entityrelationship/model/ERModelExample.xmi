@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityrelationship:ERModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:entityrelationship="http://aredsl.uca.es/entityrelationship"
+    xsi:schemaLocation="http://aredsl.uca.es/entityrelationship entityrelationship.ecore">
+  <entities
+      name="Cient">
+    <attributes
+        name="username"
+        dataType="STRING"/>
+    <attributes
+        name="userID"
+        dataType="STRING"
+        foreignKey="true"/>
+    <attributes
+        name="edad"/>
+  </entities>
+  <entities
+      name="Order">
+    <attributes
+        name="purchaseDate"
+        dataType="DATE"/>
+  </entities>
+  <entities
+      name="Product">
+    <attributes
+        name="description"
+        dataType="STRING"/>
+  </entities>
+  <relantionships
+      name="Place"
+      sourceCardinality="1"
+      targetCardinality="0..*"
+      source="Cient"
+      target="Order"/>
+  <relantionships
+      name="IsComposedOf"
+      sourceCardinality="1"
+      targetCardinality="1..*"
+      source="Order"
+      target="Product"/>
+</entityrelationship:ERModel>
