@@ -7,9 +7,9 @@ Modeling languages allow experts to establish a common and shared vocabulary for
 
 The framework provides a systematic [approach](#Method) for the design and deployment of AR editors, a dedicated metamodel and some support tools. The generated editors are Android mobile apps based on [Unity](https://unity3d.com), the popular game development platform, along with [Vuforia](https://www.vuforia.com/), a widely used AR development kit.
 
-## ARE4DSL in action (soon)
-[![IMAGE ALT TEXT](https://github.com/spi-fm/ARE4DSL/blob/master/img/demo.png)](https://www.youtube.com/watch?v=DMU6TSxY5DE "An entity-relationship model editor based on Augmented Reality
-")
+## Proof-of-concept
+[![IMAGE ALT TEXT](https://github.com/spi-fm/ARE4DSL/blob/master/img/demo.png)](https://www.youtube.com/watch?v=DMU6TSxY5DE "An entity-relationship model editor based on Augmented Reality")
+Tap the image for watching a video of an entity-relationship model editor based on Augmented Reality
 
      
 ## Method
