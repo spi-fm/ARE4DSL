@@ -64,6 +64,7 @@ Project researchers:
 * [Iván Ruiz](https://github.com/ruizrube)
 * [Rubén Baena Pérez](https://github.com/lordrubenbp)
 * [José Miguel Mota](https://github.com/josemiguelmota) 
+* [Juan Manuel Dodero](https://github.com/dodero)
 * [Inmaculada Arnedillo](https://www.tcd.ie/research/profiles/?profile=arnedii)
 
 Mobile app developer: 
