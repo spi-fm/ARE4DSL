@@ -1,6 +1,7 @@
 # ARE4DSL 
 # Augmented Reality Editors for Domain Specific Languages
-**A framework to develop model editors based on augmented reality** 
+
+This framework is explained on the paper: **Model-driven development of augmented reality-based editors for domain specific languages** available at: https://ixdea.org/45_11/
 
 ## Intro
 Modeling languages allow experts to establish a common and shared vocabulary for either a particular domain or several ones. Designing visual models usually demands qualified people with spatial and abstraction skills. Many people may train these abilities, but others can develop different skills according to other learning styles. Bodily-kinesthetic intelligence is an special ability in which individuals are able to use their entire body or parts of it to handle objects and control motions successfully. However, common modeling tools do not allow users to leverage these skills. This Github page contains the resources of a model-driven framework to develop model editors to work with domain specific languages. These editors are achieved by means of augmented reality technologies, which enable to track physical objects and create a mixed reality in real time. 
